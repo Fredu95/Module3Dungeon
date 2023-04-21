@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerAction : MonoBehaviour
 {
     [SerializeField] Transform player;
-    
+    Animator animator;
     [SerializeField] float lifeTime;
     [SerializeField] float damage;
       [SerializeField] Vector3 playerLogation;
@@ -16,7 +16,7 @@ public class PlayerAction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
    
@@ -32,10 +32,12 @@ public class PlayerAction : MonoBehaviour
     else if (other.gameObject.tag == "Enemy")
        {    //Enemy hit
          hp -=1;
+         
        Debug.Log(hp);
        transform.position = playerLogation;;
         if (hp ==0)
-            {   
+            {  
+            animator.SetBool("hurt", true);
             //hp0 and player ded...
             Debug.Log("Life");
             Destroy(gameObject, 2f);
