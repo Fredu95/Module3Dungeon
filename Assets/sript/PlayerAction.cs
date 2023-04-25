@@ -25,7 +25,7 @@ public class PlayerAction : MonoBehaviour
     if (other.gameObject.tag == "Key")
         {   //key give 4 more hp
           hp += 4;
-           Debug.Log("Key");
+           
            Destroy(other.gameObject);
         }
     
