@@ -38,4 +38,10 @@ public class Enemy : MonoBehaviour
         transform.position = EnemyLogation;
     }
     }
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.gameObject.tag == "Bullet")
+        Destroy(gameObject);
+    }
+
 }

@@ -38,16 +38,19 @@ Vector2 displacement;
       {
       animator.SetFloat("Xspeed",rb.velocity.x);
       animator.SetFloat("Yspeed",rb.velocity.y);
-      float SpeedX = animator.GetFloat("Xspeed");
-      float SpeedY = animator.GetFloat("Yspeed");
-      Debug.Log(SpeedX);
+      
+      
       animator.SetBool("Walk", true);
       }
       else
       {
          animator.SetBool("Walk", false);
       }
-      if(Input.GetButtonDown("Jump"))
+      float SpeedX = animator.GetFloat("Xspeed");
+      float SpeedY = animator.GetFloat("Yspeed");
+      Debug.Log(SpeedX);
+      
+      if(Input.GetButton("Jump") && shotTime <= 0)
       {
         Debug.Log("shut");
         GameObject newbullet = Instantiate(bullet, shotPosition.position, transform.rotation);
@@ -57,6 +60,6 @@ Vector2 displacement;
             shotTime=shotPeriod;
 
       }shotTime -= Time.deltaTime;
+    
     }
-      
 }
