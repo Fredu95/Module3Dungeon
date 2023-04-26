@@ -36,7 +36,8 @@ public class PlayerAction : MonoBehaviour
        Debug.Log(hp);
        transform.position = playerLogation;;
         if (hp ==0)
-            {  
+            {
+            SceneManager.LoadScene("gameover");  
             animator.SetBool("hurt", true);
             //hp0 and player ded...
             Debug.Log("Life");

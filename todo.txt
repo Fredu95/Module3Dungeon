@@ -1,5 +1,4 @@
 -damage to enemy
 -(patrol enemy to hunt player)
--More scene to move from door
 -doors and key color
 -player hurt enemy

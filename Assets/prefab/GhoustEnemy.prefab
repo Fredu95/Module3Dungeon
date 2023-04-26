@@ -101,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ob3: {fileID: 5878892329112779160}
   ob3acceleration: {x: 0, y: 0, z: 0}
-  distance: 3
-  EnemyLogation: {x: 1, y: 3, z: 0}
+  distance: 7
+  EnemyLogation: {x: 26.5, y: 14.5, z: 0}
   target: {fileID: 7474787270129967224, guid: c2ac5bef68ef834408e7a6979584a106, type: 3}
 --- !u!95 &7671102226663666004
 Animator:
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
