@@ -43,9 +43,9 @@ GameObject:
   - component: {fileID: 7474787270129967227}
   - component: {fileID: 7474787270129967225}
   - component: {fileID: 7474787270129967206}
+  - component: {fileID: 7474787270129967204}
   - component: {fileID: 7474787270129967207}
   - component: {fileID: 292716561889473314}
-  - component: {fileID: 7474787270129967204}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -168,37 +168,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
---- !u!114 &7474787270129967207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7474787270129967226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf662ccd3cdb2554bb0a50bb72f68491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: {fileID: 0}
-  speed: 500
---- !u!114 &292716561889473314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7474787270129967226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f916c003a7dfc5d4a9f998c1a1a76ef0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7474787270129967224}
-  lifeTime: 0
-  damage: 0
-  playerLogation: {x: -9, y: -2, z: 0}
-  hp: 4
 --- !u!95 &7474787270129967204
 Animator:
   serializedVersion: 5
@@ -220,3 +189,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7474787270129967207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474787270129967226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf662ccd3cdb2554bb0a50bb72f68491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  shotPosition: {fileID: 0}
+  shotForce: 0
+  lifeTime: 3
+  shotPeriod: 0
+  direction: {fileID: 0}
+  speed: 500
+--- !u!114 &292716561889473314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474787270129967226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f916c003a7dfc5d4a9f998c1a1a76ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7474787270129967224}
+  playerLogation: {x: -9, y: -2, z: 0}
+  playerState: 1
+  hurtTime: 0.3
+  hp: 4

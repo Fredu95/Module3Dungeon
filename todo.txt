@@ -1,4 +1,1 @@
--damage to enemy
 -(patrol enemy to hunt player)
--doors and key color
--player hurt enemy

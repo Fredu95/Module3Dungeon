@@ -38,4 +38,12 @@ public class PatrolEnemy : MonoBehaviour
             SetCurrentTarget(currentTarget +1);
         }
     }
+ void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.gameObject.tag == "Bullet")
+        Destroy(gameObject);
+    }
+
+
+
 }

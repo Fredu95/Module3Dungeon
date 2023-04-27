@@ -48,11 +48,11 @@ Vector2 displacement;
       }
       float SpeedX = animator.GetFloat("Xspeed");
       float SpeedY = animator.GetFloat("Yspeed");
-      Debug.Log(SpeedX);
+     
       
       if(Input.GetButton("Jump") && shotTime <= 0)
       {
-        Debug.Log("shut");
+        
         GameObject newbullet = Instantiate(bullet, shotPosition.position, transform.rotation);
             Rigidbody2D rb = newbullet.GetComponent<Rigidbody2D>();
             rb.AddForce(transform.up * shotForce);
